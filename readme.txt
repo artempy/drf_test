@@ -1,3 +1,17 @@
+=================Развертывание============
+Стандартное:
+pip -r requirements.txt
+python manage.py makemigrations app
+python manage.py migrate
+
+Посредством Docker:
+docker-compose up --build -d
+docker exec -ti djangotestapi_django_1 bash
+python manage.py makemigrations app
+python manage.py migrate
+
+
+===============Использование==============
 Создание приложения:
 POST /api/test
 Пример тела запроса в json:
