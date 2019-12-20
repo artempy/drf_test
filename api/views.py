@@ -45,6 +45,7 @@ class AppView(views.APIView):
 
         if not name:
             response['error'] = 'name is not set'
+            return JsonResponse(response)
 
         App.objects.create(name=name, api_key=api_key)
         response['success'] = True
