@@ -3,6 +3,7 @@
 pip -r requirements.txt
 python manage.py makemigrations app
 python manage.py migrate
+Запуск: python manage.py runserver
 
 Посредством Docker:
 docker-compose up --build -d
