@@ -1,0 +1,5 @@
+.idea/
+rest_api/migrations
+venv/
+db.*
+*.py[cod]
