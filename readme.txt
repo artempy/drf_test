@@ -1,6 +1,6 @@
 =================Развертывание============
 Стандартное:
-pip -r requirements.txt
+pip -r install requirements.txt
 python manage.py makemigrations app
 python manage.py migrate
 Запуск: python manage.py runserver
