@@ -15,7 +15,7 @@ class AppView(views.APIView):
         response = {}
         response['data'] = {}
         response['success'] = False
-        api_key = request.GET.get('api_key')
+        api_key = request.META.get('HTTP_APIKEY')
 
         if not api_key:
             response['error'] = 'API_KEY is not set'
@@ -58,10 +58,11 @@ class AppView(views.APIView):
         response['success'] = False
 
         name = request.data.get('name')
-        api_key = request.data.get('API_KEY')
+        api_key = request.META.get('HTTP_APIKEY')
 
         if not name or not api_key:
             response['error'] = 'name or API_KEY is not set'
+            return JsonResponse(response)
 
         try:
             app = App.objects.get(
@@ -81,10 +82,11 @@ class AppView(views.APIView):
         response = {}
         response['success'] = False
 
-        api_key = request.data.get('API_KEY')
+        api_key = request.META.get('HTTP_APIKEY')
 
         if not api_key:
             response['error'] = 'API_KEY is not set'
+            return JsonResponse(response)
 
         try:
             app = App.objects.get(
@@ -106,10 +108,11 @@ def set_api_key(request):
     response = {}
     response['success'] = False
 
-    api_key = request.data.get('API_KEY')
+    api_key = request.META.get('HTTP_APIKEY')
 
     if not api_key:
         response['error'] = 'API_KEY is not set'
+        return JsonResponse(response)
 
     try:
         app = App.objects.get(
