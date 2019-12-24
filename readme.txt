@@ -29,21 +29,16 @@ PUT /api/test
 Пример запроса: curl -d '{"name": "super1"}' -H 'Content-Type: application/json'  -H 'APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2' -X PUT http://127.0.0.1:8000/api/test
 Пример тела запроса в json:
 {
-	"API_KEY": "e0c7309b0f4b5ca9c52da5c48343c22d009f827210fd598371262b383e443a49",
 	"name": "new_test_app"
 }
 
 Удаление приложения:
 DELETE /api/test
 Пример запроса: curl -H 'Content-Type: application/json'  -H 'APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2' -X DELETE http://127.0.0.1:8000/api/test
-Пример тела запроса в json:
-{
-	"API_KEY": "e0c7309b0f4b5ca9c52da5c48343c22d009f827210fd598371262b383e443a49",
-}
 
 
 Получение информации о приложении:
-GET /api/test?api_key=YOUR_API_KEY
+GET /api/test
 Пример запроса: curl -H 'APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2' http://127.0.0.1:8000/api/test
  
 Возвращает json вида:
@@ -60,10 +55,6 @@ GET /api/test?api_key=YOUR_API_KEY
 Создать новый ключ API приложения:
 POST /api/set_api_key
 Пример запроса: curl -H 'Content-Type: application/json'  -H 'APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2' -X POST http://127.0.0.1:8000/api/set_api_key
-Пример тела запроса в json:
-{
-	"API_KEY": "e0c7309b0f4b5ca9c52da5c48343c22d009f827210fd598371262b383e443a49",
-}
 
 Возвращает json вида:
 {
