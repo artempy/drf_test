@@ -30,10 +30,12 @@ curl -d '{"name": "super"}' -H 'Content-Type: application/json' -X POST http://1
 ```
 
 Пример тела запроса в json:  
-{  
-  "name": "test_app"  
-}  
-
+```json
+{
+  "name": "test_app"
+}
+```
+  
 Возвращает API_KEY, который нужно использовать для дальнейшей работы.  
 Передавать в заголовке **APIKEY**.  
 Пример: APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2
@@ -49,10 +51,11 @@ curl -d '{"name": "super1"}' -H 'Content-Type: application/json'  -H 'APIKEY: a4
   
 Пример тела запроса в json:  
 ```json
-{  
+{
   "name": "new_test_app"
-}  
+}
 ```
+  
   
 #### Удаление приложения:
 *DELETE /api/test*  
@@ -72,15 +75,16 @@ curl -H 'APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c
 ```
    
 Возвращает json вида:  
-{  
-    "data": {  
-        "id": 4,  
-        "name": "test_app",  
-        "api_key": "e0c7309b0f4b5ca9c52da5c48343c22d009f827210fd598371262b383e443a49"  
-    },  
-    "success": true  
-}  
-  
+```json
+{
+    "data": {
+        "id": 4,
+        "name": "test_app",
+        "api_key": "e0c7309b0f4b5ca9c52da5c48343c22d009f827210fd598371262b383e443a49"
+    },
+    "success": true
+}
+```
   
 #### Создать новый ключ API приложения:
 *POST /api/set_api_key*  
@@ -91,7 +95,9 @@ curl -H 'Content-Type: application/json'  -H 'APIKEY: a41d1a8663b8e4dec488cce676
 ```
   
 Возвращает json вида:  
-{  
-    "success": true,  
-    "API_KEY": "ebf751f1b62441146e24a3868856b796ca9a7890cb9037dc9a56e6b17e5b7fd1"  
-}  
+```json
+{
+    "success": true,
+    "API_KEY": "ebf751f1b62441146e24a3868856b796ca9a7890cb9037dc9a56e6b17e5b7fd1"
+}
+```
