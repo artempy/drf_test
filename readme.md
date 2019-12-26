@@ -38,7 +38,7 @@ curl -d '{"name": "super"}' -H 'Content-Type: application/json' -X POST http://1
   
 Возвращает API_KEY, который нужно использовать для дальнейшей работы.  
 Передавать в заголовке **APIKEY**.  
-Пример: APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2
+**Пример:** APIKEY: a41d1a8663b8e4dec488cce676742daa24d7360aad1457296b7937c6241f42c2
   
   
 #### Обновление информации приложения:
